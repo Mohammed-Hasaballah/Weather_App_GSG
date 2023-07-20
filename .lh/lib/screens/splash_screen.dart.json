@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/screens/splash_screen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1689240841876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689240854458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+\r\n class SplashScreen extends StatefulWidget {\r\n   @override\r\n   _SplashScreenState createState() => _SplashScreenState();\r\n }\r\n"
+                },
+                {
+                    "date": 1689240863465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-\r\n+import 'package:flutter/material.dart';\r\n class SplashScreen extends StatefulWidget {\r\n   @override\r\n   _SplashScreenState createState() => _SplashScreenState();\r\n }\r\n"
+                },
+                {
+                    "date": 1689240875209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import 'package:flutter/material.dart';\r\n+import 'package:weather_app/screens/loading_screen.dart';\r\n class SplashScreen extends StatefulWidget {\r\n   @override\r\n   _SplashScreenState createState() => _SplashScreenState();\r\n }\r\n@@ -15,9 +16,9 @@\n     Future.delayed(Duration(seconds: 2), () {\r\n       // After the delay, navigate to the home screen or any other screen\r\n       Navigator.pushReplacement(\r\n         context,\r\n-        MaterialPageRoute(builder: (context) => HomeScreen()),\r\n+        MaterialPageRoute(builder: (context) => LoadingScreen()),\r\n       );\r\n     });\r\n   }\r\n \r\n"
+                },
+                {
+                    "date": 1689240885521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,10 @@\n import 'package:flutter/material.dart';\r\n import 'package:weather_app/screens/loading_screen.dart';\r\n+\r\n class SplashScreen extends StatefulWidget {\r\n+  const SplashScreen({super.key});\r\n+\r\n   @override\r\n   _SplashScreenState createState() => _SplashScreenState();\r\n }\r\n \r\n@@ -12,25 +15,25 @@\n     // Add any initialization logic here\r\n     // For example, you can load data or perform any setup operations\r\n     // You can use a Timer to simulate a delay for the splash screen\r\n     // For demonstration purposes, we'll use a 2-second delay\r\n-    Future.delayed(Duration(seconds: 2), () {\r\n+    Future.delayed(const Duration(seconds: 2), () {\r\n       // After the delay, navigate to the home screen or any other screen\r\n       Navigator.pushReplacement(\r\n         context,\r\n-        MaterialPageRoute(builder: (context) => LoadingScreen()),\r\n+        MaterialPageRoute(builder: (context) => const LoadingScreen()),\r\n       );\r\n     });\r\n   }\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n-    return Scaffold(\r\n-      backgroundColor: Colors.white, // Customize the background color if needed\r\n+    return const Scaffold(\r\n+      backgroundColor: Colors.white, \r\n       body: Center(\r\n         child: FlutterLogo(\r\n           size: 150,\r\n         ),\r\n\\ No newline at end of file\n       ),\r\n     );\r\n   }\r\n-}\n+}\r\n"
+                },
+                {
+                    "date": 1689240894326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,10 @@\n class _SplashScreenState extends State<SplashScreen> {\r\n   @override\r\n   void initState() {\r\n     super.initState();\r\n-    // Add any initialization logic here\r\n-    // For example, you can load data or perform any setup operations\r\n-    // You can use a Timer to simulate a delay for the splash screen\r\n-    // For demonstration purposes, we'll use a 2-second delay\r\n     Future.delayed(const Duration(seconds: 2), () {\r\n-      // After the delay, navigate to the home screen or any other screen\r\n+\r\n       Navigator.pushReplacement(\r\n         context,\r\n         MaterialPageRoute(builder: (context) => const LoadingScreen()),\r\n       );\r\n@@ -35,5 +31,5 @@\n         ),\r\n       ),\r\n     );\r\n   }\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                },
+                {
+                    "date": 1689240902106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+// ignore_for_file: library_private_types_in_public_api\r\n+\r\n import 'package:flutter/material.dart';\r\n import 'package:weather_app/screens/loading_screen.dart';\r\n \r\n class SplashScreen extends StatefulWidget {\r\n@@ -12,9 +14,8 @@\n   @override\r\n   void initState() {\r\n     super.initState();\r\n     Future.delayed(const Duration(seconds: 2), () {\r\n-\r\n       Navigator.pushReplacement(\r\n         context,\r\n         MaterialPageRoute(builder: (context) => const LoadingScreen()),\r\n       );\r\n@@ -23,9 +24,9 @@\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return const Scaffold(\r\n-      backgroundColor: Colors.white, \r\n+      backgroundColor: Colors.white,\r\n       body: Center(\r\n         child: FlutterLogo(\r\n           size: 150,\r\n         ),\r\n"
+                }
+            ],
+            "date": 1689240841876,
+            "name": "Commit-0",
+            "content": "class SplashScreen extends StatefulWidget {\r\n  @override\r\n  _SplashScreenState createState() => _SplashScreenState();\r\n}\r\n\r\nclass _SplashScreenState extends State<SplashScreen> {\r\n  @override\r\n  void initState() {\r\n    super.initState();\r\n    // Add any initialization logic here\r\n    // For example, you can load data or perform any setup operations\r\n    // You can use a Timer to simulate a delay for the splash screen\r\n    // For demonstration purposes, we'll use a 2-second delay\r\n    Future.delayed(Duration(seconds: 2), () {\r\n      // After the delay, navigate to the home screen or any other screen\r\n      Navigator.pushReplacement(\r\n        context,\r\n        MaterialPageRoute(builder: (context) => HomeScreen()),\r\n      );\r\n    });\r\n  }\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      backgroundColor: Colors.white, // Customize the background color if needed\r\n      body: Center(\r\n        child: FlutterLogo(\r\n          size: 150,\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "lib/services/networking.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1689103484636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689103491162,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,1 @@\n-class NetWork\n\\ No newline at end of file\n+class NetworkHelper\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1689103498386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,3 @@\n-class NetworkHelper\n\\ No newline at end of file\n+class NetworkHelper{\r\n+  final String\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1689103505964,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n-class NetworkHelper{\r\n-  final String\r\n-}\n\\ No newline at end of file\n+class NetworkHelper {\r\n+  final String url; \r\n+  NetworkHelper(this.url);\r\n+}\r\n"
+                },
+                {
+                    "date": 1689103517436,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n class NetworkHelper {\r\n   final String url; \r\n-  NetworkHelper(this.url);\r\n+  NetworkHelper({this.url);\r\n }\r\n"
+                },
+                {
+                    "date": 1689103523520,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n class NetworkHelper {\r\n   final String url;\r\n-  NetworkHelper({this.url});\r\n+  NetworkHelper({ required.url});\r\n }\r\n"
+                },
+                {
+                    "date": 1689103749143,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,7 @@\n     http.Response response = await http.get(Uri.parse(url));\r\n     if (response.statusCode == 200) {\r\n       return jsonDecode(response.body);\r\n     }\r\n-    return Future.error('fetching data');\r\n+    return Future.error('Error while fetching data');\r\n   }\r\n }\r\n"
+                }
+            ],
+            "date": 1689103484635,
+            "name": "Commit-0",
+            "content": "class NetWork"
+        }
+    ]
+}

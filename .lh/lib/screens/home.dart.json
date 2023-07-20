@@ -1,0 +1,82 @@
+{
+    "sourceFile": "lib/screens/home.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1689250007417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689250019623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n \r\n+import 'dart:async';\r\n+import 'dart:typed_data';\r\n+\r\n import 'package:flutter/material.dart';\r\n import 'package:http/http.dart' as http;\r\n \r\n class MyHomePage extends StatefulWidget {\r\n"
+                },
+                {
+                    "date": 1689250035952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n         future: loadImage(),\r\n         builder: (BuildContext context, AsyncSnapshot<ImageProvider> snapshot) {\r\n           if (snapshot.connectionState == ConnectionState.done) {\r\n             return Image(\r\n-              image: snapshot.data,\r\n+              image: snapshot.data!,\r\n             );\r\n           } else {\r\n             return Image.asset('assets/images/placeholder.png');\r\n           }\r\n"
+                },
+                {
+                    "date": 1689250047952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:http/http.dart' as http;\r\n \r\n class MyHomePage extends StatefulWidget {\r\n-  MyHomePage({Key key, this.title}) : super(key: key);\r\n+  const MyHomePage({Key key, this.title}) : super(key: key);\r\n \r\n   final String title;\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1689250054603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:http/http.dart' as http;\r\n \r\n class MyHomePage extends StatefulWidget {\r\n-  const MyHomePage({Key key, this.title}) : super(key: key);\r\n+  const MyHomePage({required Key key, required this.title}) : super(key: key);\r\n \r\n   final String title;\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1689250065880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import 'package:flutter/material.dart';\r\n import 'package:http/http.dart' as http;\r\n \r\n class MyHomePage extends StatefulWidget {\r\n-  const MyHomePage({required Key key, required this.title}) : super(key: key);\r\n+ \r\n \r\n   final String title;\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1689250071653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,10 @@\n  \r\n \r\n   final String title;\r\n \r\n+  const MyHomePage({super.key, required this.title});\r\n+\r\n   @override\r\n   _MyHomePageState createState() => _MyHomePageState();\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1689250089823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n class MyHomePage extends StatefulWidget {\r\n  \r\n \r\n-  final String title;\r\n+   String title;\r\n \r\n   const MyHomePage({super.key, required this.title});\r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1689250096372,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n  \r\n \r\n    String title;\r\n \r\n-  const MyHomePage({super.key, required this.title});\r\n \r\n+\r\n   @override\r\n   _MyHomePageState createState() => _MyHomePageState();\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1689250105211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n class MyHomePage extends StatefulWidget {\r\n  \r\n \r\n-   String title;\r\n+   String? title;\r\n \r\n \r\n \r\n   @override\r\n"
+                },
+                {
+                    "date": 1689250119972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n \r\n+// ignore_for_file: must_be_immutable\r\n+\r\n import 'dart:async';\r\n import 'dart:typed_data';\r\n \r\n import 'package:flutter/material.dart';\r\n@@ -9,10 +11,12 @@\n  \r\n \r\n    String? title;\r\n \r\n+  MyHomePage({super.key});\r\n \r\n \r\n+\r\n   @override\r\n   _MyHomePageState createState() => _MyHomePageState();\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1689250128201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n-        title: Text(widget.title),\r\n+        title: Text('widget.title'),\r\n       ),\r\n       body: FutureBuilder(\r\n         future: loadImage(),\r\n         builder: (BuildContext context, AsyncSnapshot<ImageProvider> snapshot) {\r\n"
+                },
+                {
+                    "date": 1689250137307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n-        title: Text('widget.title'),\r\n+        title: Text('home'),\r\n       ),\r\n       body: FutureBuilder(\r\n         future: loadImage(),\r\n         builder: (BuildContext context, AsyncSnapshot<ImageProvider> snapshot) {\r\n@@ -47,9 +47,9 @@\n \r\n   Future<ImageProvider> loadImage() async {\r\n     Completer<ImageProvider> completer = Completer();\r\n     try {\r\n-      var response = await http.get(providerImage);\r\n+      var response = await http.get(providerImage@);\r\n       if (response.statusCode == 200) {\r\n         final Uint8List bytes = response.bodyBytes;\r\n         final ImageProvider image = MemoryImage(bytes);\r\n         completer.complete(image);\r\n"
+                },
+                {
+                    "date": 1689250154521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n \r\n   Future<ImageProvider> loadImage() async {\r\n     Completer<ImageProvider> completer = Completer();\r\n     try {\r\n-      var response = await http.get(providerImage@);\r\n+      var response = await http.get(providerImage as Uri);\r\n       if (response.statusCode == 200) {\r\n         final Uint8List bytes = response.bodyBytes;\r\n         final ImageProvider image = MemoryImage(bytes);\r\n         completer.complete(image);\r\n"
+                },
+                {
+                    "date": 1689250169433,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n             return Image(\r\n               image: snapshot.data!,\r\n             );\r\n           } else {\r\n-            return Image.asset('assets/images/placeholder.png');\r\n+            return Image.asset('images/placeholder.png');\r\n           }\r\n         },\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1689250178617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n             return Image(\r\n               image: snapshot.data!,\r\n             );\r\n           } else {\r\n-            return Image.asset('images/placeholder.png');\r\n+            return Image.asset('images/city_background.j');\r\n           }\r\n         },\r\n       ),\r\n     );\r\n"
+                },
+                {
+                    "date": 1689250187620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,35 +1,29 @@\n-\r\n // ignore_for_file: must_be_immutable\r\n \r\n import 'dart:async';\r\n import 'dart:typed_data';\r\n-\r\n import 'package:flutter/material.dart';\r\n import 'package:http/http.dart' as http;\r\n \r\n class MyHomePage extends StatefulWidget {\r\n- \r\n+  String? title;\r\n \r\n-   String? title;\r\n-\r\n   MyHomePage({super.key});\r\n \r\n-\r\n-\r\n   @override\r\n   _MyHomePageState createState() => _MyHomePageState();\r\n }\r\n \r\n class _MyHomePageState extends State<MyHomePage> {\r\n-  ImageProvider providerImage = NetworkImage(\r\n-      'https://source.unsplash.com/random/?nature,day');\r\n+  ImageProvider providerImage =\r\n+      const NetworkImage('https://source.unsplash.com/random/?nature,day');\r\n \r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n       appBar: AppBar(\r\n-        title: Text('home'),\r\n+        title: const Text('home'),\r\n       ),\r\n       body: FutureBuilder(\r\n         future: loadImage(),\r\n         builder: (BuildContext context, AsyncSnapshot<ImageProvider> snapshot) {\r\n@@ -37,9 +31,9 @@\n             return Image(\r\n               image: snapshot.data!,\r\n             );\r\n           } else {\r\n-            return Image.asset('images/city_background.j');\r\n+            return Image.asset('images/city_background.jpg');\r\n           }\r\n         },\r\n       ),\r\n     );\r\n@@ -60,5 +54,5 @@\n       completer.completeError('Error loading image');\r\n     }\r\n     return completer.future;\r\n   }\r\n-}\n\\ No newline at end of file\n+}\r\n"
+                }
+            ],
+            "date": 1689250007417,
+            "name": "Commit-0",
+            "content": "\r\nimport 'package:flutter/material.dart';\r\nimport 'package:http/http.dart' as http;\r\n\r\nclass MyHomePage extends StatefulWidget {\r\n  MyHomePage({Key key, this.title}) : super(key: key);\r\n\r\n  final String title;\r\n\r\n  @override\r\n  _MyHomePageState createState() => _MyHomePageState();\r\n}\r\n\r\nclass _MyHomePageState extends State<MyHomePage> {\r\n  ImageProvider providerImage = NetworkImage(\r\n      'https://source.unsplash.com/random/?nature,day');\r\n\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      appBar: AppBar(\r\n        title: Text(widget.title),\r\n      ),\r\n      body: FutureBuilder(\r\n        future: loadImage(),\r\n        builder: (BuildContext context, AsyncSnapshot<ImageProvider> snapshot) {\r\n          if (snapshot.connectionState == ConnectionState.done) {\r\n            return Image(\r\n              image: snapshot.data,\r\n            );\r\n          } else {\r\n            return Image.asset('assets/images/placeholder.png');\r\n          }\r\n        },\r\n      ),\r\n    );\r\n  }\r\n\r\n  Future<ImageProvider> loadImage() async {\r\n    Completer<ImageProvider> completer = Completer();\r\n    try {\r\n      var response = await http.get(providerImage);\r\n      if (response.statusCode == 200) {\r\n        final Uint8List bytes = response.bodyBytes;\r\n        final ImageProvider image = MemoryImage(bytes);\r\n        completer.complete(image);\r\n      } else {\r\n        completer.completeError('Error loading image');\r\n      }\r\n    } catch (e) {\r\n      completer.completeError('Error loading image');\r\n    }\r\n    return completer.future;\r\n  }\r\n}"
+        }
+    ]
+}

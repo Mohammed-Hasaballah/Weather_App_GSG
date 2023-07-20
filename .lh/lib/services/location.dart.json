@@ -1,0 +1,38 @@
+{
+    "sourceFile": "lib/services/location.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1689076119808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689076174240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,12 @@\n class Location {\r\n   late double lat;\r\n-  final double long;\r\n+  late double long;\r\n   Location({required this.lat, required this.long});\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n+\r\n }\r\n"
+                },
+                {
+                    "date": 1689076181424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n class Location {\r\n   late double lat;\r\n   late double long;\r\n   Location({required this.lat, required this.long});\r\n+void get\r\n \r\n \r\n \r\n \r\n \r\n \r\n-\r\n }\r\n"
+                },
+                {
+                    "date": 1689076189576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n class Location {\r\n   late double lat;\r\n   late double long;\r\n   Location({required this.lat, required this.long});\r\n-void get\r\n+void getCurrentLocation()async\r\n \r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1689076196300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   late double lat;\r\n   late double long;\r\n   Location({required this.lat, required this.long});\r\n void getCurrentLocation()async{\r\n-  try{}\r\n+  try{}v\r\n }\r\n \r\n \r\n \r\n"
+                },
+                {
+                    "date": 1689076245194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+import 'package:geolocator/geolocator.dart';\r\n+\r\n+class Location {\r\n+  late double lat;\r\n+  late double long;\r\n+  Location({required this.lat, required this.long});\r\n+  void getCurrentLocation() async {\r\n+    try {\r\n+      Position position = await _getLocation();\r\n+      lat = position.latitude;\r\n+      long = position.longitude;\r\n+    } catch (e) {\r\n+      print(e);\r\n+    }\r\n+  }\r\n+}\r\n"
+                }
+            ],
+            "date": 1689076119808,
+            "name": "Commit-0",
+            "content": "class Location {\r\n  late double lat;\r\n  final double long;\r\n  Location({required this.lat, required this.long});\r\n}\r\n"
+        }
+    ]
+}

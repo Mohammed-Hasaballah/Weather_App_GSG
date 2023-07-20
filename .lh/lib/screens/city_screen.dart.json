@@ -1,0 +1,30 @@
+{
+    "sourceFile": "lib/screens/city_screen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1689112316830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689112344047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n               Align(\r\n                 alignment: Alignment.topLeft,\r\n                 child: TextButton(\r\n                   onPressed: () {\r\n-                    \r\n+                    Navigator.pop(context);\r\n                   },\r\n                   child: const Icon(\r\n                     Icons.arrow_back_ios,\r\n                     size: 50.0,\r\n@@ -42,9 +42,9 @@\n               ),\r\n               TextButton(\r\n                 onPressed: () {},\r\n                 child: const Text(\r\n-                  'Get Weather',\r\n+                  'Get Weather Search',\r\n                   style: kButtonTextStyle,\r\n                 ),\r\n               ),\r\n             ],\r\n"
+                },
+                {
+                    "date": 1689112350902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n               ),\r\n               TextButton(\r\n                 onPressed: () {},\r\n                 child: const Text(\r\n-                  'Get Weather Searching ',\r\n+                  'Get Weather Searching By City Name: ',\r\n                   style: kButtonTextStyle,\r\n                 ),\r\n               ),\r\n             ],\r\n"
+                },
+                {
+                    "date": 1689112359361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n               ),\r\n               TextButton(\r\n                 onPressed: () {},\r\n                 child: const Text(\r\n-                  'Get Weather Searching\\n By City Name: ',\r\n+                  'Get Weather Searching\\nBy City Name: ',\r\n                   style: kButtonTextStyle,\r\n                 ),\r\n               ),\r\n             ],\r\n"
+                }
+            ],
+            "date": 1689112316830,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\n\r\nimport '../utilities/constants.dart';\r\n\r\nclass CityScreen extends StatefulWidget {\r\n  const CityScreen({super.key});\r\n\r\n  @override\r\n  CityScreenState createState() => CityScreenState();\r\n}\r\n\r\nclass CityScreenState extends State<CityScreen> {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      body: Container(\r\n        decoration: const BoxDecoration(\r\n          image: DecorationImage(\r\n            image: AssetImage('images/city_background.jpg'),\r\n            fit: BoxFit.cover,\r\n          ),\r\n        ),\r\n        constraints: const BoxConstraints.expand(),\r\n        child: SafeArea(\r\n          child: Column(\r\n            children: <Widget>[\r\n              Align(\r\n                alignment: Alignment.topLeft,\r\n                child: TextButton(\r\n                  onPressed: () {\r\n                    \r\n                  },\r\n                  child: const Icon(\r\n                    Icons.arrow_back_ios,\r\n                    size: 50.0,\r\n                  ),\r\n                ),\r\n              ),\r\n              Container(\r\n                padding: const EdgeInsets.all(20.0),\r\n                child: null,\r\n              ),\r\n              TextButton(\r\n                onPressed: () {},\r\n                child: const Text(\r\n                  'Get Weather',\r\n                  style: kButtonTextStyle,\r\n                ),\r\n              ),\r\n            ],\r\n          ),\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}
