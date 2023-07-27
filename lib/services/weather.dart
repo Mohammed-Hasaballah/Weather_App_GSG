@@ -38,7 +38,7 @@ class WeatherModel {
     temp = weatherInfo['main']['temp'];
     weatherId = weatherInfo['weather'][0]['id'];
     cityName = weatherInfo['name'];
-    weatherDesc = weatherInfo['weather'][0]['main'].tolowerCase();
+    weatherDesc = weatherInfo['weather'][0]['main'];
   }
 
   String getWeatherIcon() {

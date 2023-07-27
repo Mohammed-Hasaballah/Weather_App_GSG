@@ -25,7 +25,7 @@ class LocationScreenState extends State<LocationScreen> {
   late String icon;
   late String description;
   late String weatherDesc;
-  bool isLoaded = false;
+
   WeatherModel weatherInfo = WeatherModel();
 
   void updateUI(WeatherModel weatherData) {
@@ -82,6 +82,7 @@ class LocationScreenState extends State<LocationScreen> {
                       onPressed: () async {
                         await weatherInfo.getCurrentLocationWeather();
                         updateUI(weatherInfo);
+                        setState(() {});
                       },
                       child: const Icon(
                         Icons.near_me,
